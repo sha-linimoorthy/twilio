@@ -1,0 +1,16 @@
+
+from twilio.rest import Client
+
+acc_name = 'AC0cd334b3cf846ac50457de4e8178d824'
+auth_token= '180a648208bd960327b36b5dcfe5c12b'
+
+client = Client(acc_name,auth_token)
+
+message = client.messages \
+                .create(
+                    body = " lets us cheer up",
+                    from_ = '+12678489660',
+                    to ='+919865082232'
+
+                    )
+print(message.body)
